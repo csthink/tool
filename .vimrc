@@ -4,6 +4,13 @@
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
 " 不与 Vi 兼容（采用 Vim 自己的操作命令）"
 set nocompatible
+
+" backspace有几种工作方式，默认是vi兼容的,以下配置是用来解决 vim 中退格键不能用的问题"
+"  indent: 如果用了:set indent,:set ai 等自动缩进，想用退格键将字段缩进的删掉，必须设置这个选项。否则不响应。"
+" eol:如果插入模式下在行开头，想通过退格键合并两行，需要设置eol "
+" start：要想删除此次插入前的输入，需设置这个 "
+set backspace=indent,eol,start
+
 " 开启文件类型侦测
 filetype on
 " 根据侦测到的不同类型加载对应的插件
