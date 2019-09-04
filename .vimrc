@@ -114,8 +114,8 @@ set history=1000
 set autoread
 
 " 如果行尾有多余的空格（包括 Tab 键），该配置将让这些空格显示成可见的小方块"
-set list listchars=tab:»·,trail:·
-set list
+"set list listchars=tab:»·,trail:·"
+"set list"
 
 " 命令模式下，底部操作指令按下 Tab 键自动补全。第一次按下 Tab，会显示所有匹配的操作指令的清单；第二次按下 Tab，会依次选择各个指令"
 set wildmenu
@@ -131,10 +131,10 @@ noremap L $
 " 命令行模式增强，ctrl - a到行首， -e 到行尾
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
+let mapleader = ";"
 " 快速保存和退出 w 保存 q 退出"
 nnoremap <leader>q :q<CR>
 nnoremap <leader>w :w<CR>
-
 
 " >>>>>>>>>>>>>>> 插件配置 >>>>>>>>>>>>>>>"
 " 需要先按照 install 说明中先下载对应的插件"
