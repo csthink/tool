@@ -114,7 +114,7 @@ set history=1000
 set autoread
 
 " 如果行尾有多余的空格（包括 Tab 键），该配置将让这些空格显示成可见的小方块"
-set listchars=tab:»■,trail:■
+set list listchars=tab:»·,trail:·
 set list
 
 " 命令模式下，底部操作指令按下 Tab 键自动补全。第一次按下 Tab，会显示所有匹配的操作指令的清单；第二次按下 Tab，会依次选择各个指令"
@@ -136,8 +136,24 @@ nnoremap <leader>q :q<CR>
 nnoremap <leader>w :w<CR>
 
 
+" >>>>>>>>>>>>>>> 插件配置 >>>>>>>>>>>>>>>"
+" 需要先按照 install 说明中先下载对应的插件"
 
+" 主题颜色"
+colorscheme molokai
+highlight NonText guibg=#060606
+highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
-
-
-
+"nerdtree 插件的配置"
+let NERDChristmasTree=0
+let NERDTreeWinSize=35
+let NERDTreeChDirMode=2
+let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
+let NERDTreeShowBookmarks=1
+let NERDTreeWinPos="left"
+"Automatically open a NERDTree if no files where specified"
+autocmd vimenter * if !argc() | NERDTree | endif
+"Close vim if the only window left open is a NERDTree"
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+"Open a NERDTree"
+nmap <F5> :NERDTreeToggle<cr>
