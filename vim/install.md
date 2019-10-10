@@ -29,7 +29,7 @@ make && make install
 
 - 查看一下你本机已经存在的包，确认一下你的VIM是否已经安装
 ```shell
-rpm -qa|grep vim
+rpm -qa | grep vim
 ```
 
 - 缺失则对应安装依赖，比如缺失 vim-enhanced
@@ -44,11 +44,6 @@ yum -y install vim
 
 ## 配置篇
 
-- 下载配色主题
-```shell
-mkdir -p ~/.vim/colors && wget https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim -O ~/.vim/colors/molokai.vim
-```
-
 - 安装 Pathogen 插件管理器
 ```shell
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
@@ -60,13 +55,7 @@ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 ```
 
-- 下载配置文件
+- 下载 vimrc 配置文件
 ```shell
 curl -fLo ~/.vimrc https://raw.githubusercontent.com/csthink/tool/master/.vimrc
 ```
-
-- 启用配置文件中引入的插件
-```shell
-
-```
-
