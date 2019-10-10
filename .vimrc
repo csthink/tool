@@ -4,9 +4,8 @@
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
 " 不与 Vi 兼容（采用 Vim 自己的操作命令）"
 set nocompatible
-
-set undolevels=1000	# Number of undo levels
-
+" 保留撤销历史次数"
+set undolevels=1000
 " backspace有几种工作方式，默认是vi兼容的,以下配置是用来解决 vim 中退格键不能用的问题"
 "  indent: 如果用了:set indent,:set ai 等自动缩进，想用退格键将字段缩进的删掉，必须设置这个选项。否则不响应。"
 " eol:如果插入模式下在行开头，想通过退格键合并两行，需要设置eol "
@@ -47,8 +46,10 @@ set softtabstop=4
 set tabstop=4
 " 在文本上按下>>（增加一级缩进）、<<（取消一级缩进）或者==（取消全部缩进）时，每一级的字符数"
 set shiftwidth=4
-set smartindent	# Enable smart-indent
-set smarttab	# Enable smart-tabs
+" Enable smart-indent"
+set smartindent
+" Enable smart-tabs"
+set smarttab
 
 " >>>>>>>>>>>>>>> 外观配置 >>>>>>>>>>>>>>>"
 
@@ -60,10 +61,8 @@ set relativenumber
 set cursorline
 " 设置行宽，即一行显示多少个字符"
 set textwidth=100
-
 " 关闭自动折行"
 "set nowrap"
-
 " 自动折行，即太长的行分成几行显示"
 set wrap
 " 只有遇到指定的符号（比如空格、连词号和其他标点符号），才发生折行。也就是说，不会在单词内部折行"
@@ -123,10 +122,6 @@ set visualbell
 set history=1000
 " 打开文件监视。如果在编辑过程中文件发生外部改变（比如被别的编辑器编辑了），就会发出提示"
 set autoread
-
-" 如果行尾有多余的空格（包括 Tab 键），该配置将让这些空格显示成可见的小方块"
-"set list listchars=tab:»·,trail:·"
-"set list"
 
 " 命令模式下，底部操作指令按下 Tab 键自动补全。第一次按下 Tab，会显示所有匹配的操作指令的清单；第二次按下 Tab，会依次选择各个指令"
 set wildmenu
