@@ -14,11 +14,11 @@ set undolevels=1000	# Number of undo levels
 set backspace=indent,eol,start
 
 " 开启文件类型侦测
-filetype on
+" filetype on"
 " 根据侦测到的不同类型加载对应的插件
-filetype plugin on
+" filetype plugin on"
 " 开启文件类型检查，并且载入与该类型对应的缩进规则,例如 .py 去查找配置 ~/.vim/indent/python.vim"
-filetype indent on
+filetype plugin indent on
 " 打开语法高亮。自动识别代码，使用多种颜色显示"
 syntax on
 " 在底部显示，当前处于命令模式还是插入模式"
@@ -147,6 +147,8 @@ nnoremap <leader>w :w<CR>
 
 " >>>>>>>>>>>>>>> 插件配置 >>>>>>>>>>>>>>>"
 " 需要先按照 install 说明中先下载对应的插件"
+" 参考 https://github.com/tpope/vim-pathogen 安装插件管理器"
+execute pathogen#infect()
 
 " 主题颜色"
 colorscheme molokai
@@ -164,5 +166,5 @@ let NERDTreeWinPos="left"
 autocmd vimenter * if !argc() | NERDTree | endif
 "Close vim if the only window left open is a NERDTree"
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-"Open a NERDTree"
-nmap <F5> :NERDTreeToggle<cr>
+"Open a NERDTree 使用 ctrl + n 快捷键"
+nmap <C-n> :NERDTreeToggle<cr>
