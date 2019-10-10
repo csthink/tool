@@ -5,6 +5,8 @@ autocmd BufWritePost $MYVIMRC source $MYVIMRC
 " 不与 Vi 兼容（采用 Vim 自己的操作命令）"
 set nocompatible
 
+set undolevels=1000	# Number of undo levels
+
 " backspace有几种工作方式，默认是vi兼容的,以下配置是用来解决 vim 中退格键不能用的问题"
 "  indent: 如果用了:set indent,:set ai 等自动缩进，想用退格键将字段缩进的删掉，必须设置这个选项。否则不响应。"
 " eol:如果插入模式下在行开头，想通过退格键合并两行，需要设置eol "
@@ -45,6 +47,8 @@ set softtabstop=4
 set tabstop=4
 " 在文本上按下>>（增加一级缩进）、<<（取消一级缩进）或者==（取消全部缩进）时，每一级的字符数"
 set shiftwidth=4
+set smartindent	# Enable smart-indent
+set smarttab	# Enable smart-tabs
 
 " >>>>>>>>>>>>>>> 外观配置 >>>>>>>>>>>>>>>"
 
@@ -55,7 +59,7 @@ set relativenumber
 " 光标所在的当前行高亮"
 set cursorline
 " 设置行宽，即一行显示多少个字符"
-set textwidth=80
+set textwidth=100
 
 " 关闭自动折行"
 "set nowrap"
