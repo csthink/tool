@@ -162,4 +162,4 @@ autocmd vimenter * if !argc() | NERDTree | endif
 "Close vim if the only window left open is a NERDTree"
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 "Open a NERDTree 使用 ctrl + n 快捷键"
-nmap <C-n> :NERDTreeToggle<cr>
+nmap <C-n> :NERDTreeToggle<CR>
