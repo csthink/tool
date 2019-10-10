@@ -1,4 +1,8 @@
 " 基础配置
+" 这里是自动让 vimrc 配置文件生效，根据 vimrc 的实际路径修改 ~/.vimrc
+if has("autocmd")
+   autocmd! bufwritepost vimrc source ~/.vimrc
+endif
 
 " 不与 Vi 兼容 （采用 Vim 自己的操作命令）
 set nocompatible
