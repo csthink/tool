@@ -138,8 +138,9 @@ noremap L $
 " 命令行模式增强，ctrl - a到行首， -e 到行尾
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
-let mapleader = ";"
-" 快速保存和退出 w 保存 q 退出"
+
+" 快速保存和退出 w 保存 q 退出"，配合 mapleader 建一起使用
+let mapleader = ","
 nnoremap <leader>q :q<CR>
 nnoremap <leader>w :w<CR>
 
