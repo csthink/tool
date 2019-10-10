@@ -49,7 +49,7 @@ yum -y install vim
 mkdir -p ~/.vim/colors && wget https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim -O ~/.vim/colors/molokai.vim
 ```
 
-- 安装插件管理器
+- 安装 Pathogen 插件管理器
 ```shell
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
@@ -64,3 +64,9 @@ git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 ```shell
 curl -fLo ~/.vimrc https://raw.githubusercontent.com/csthink/tool/master/.vimrc
 ```
+
+- 启用配置文件中引入的插件
+```shell
+
+```
+
