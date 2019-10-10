@@ -12,12 +12,8 @@ set nocompatible
 " start：要想删除此次插入前的输入，需设置这个 
 set backspace=indent,eol,start
 
-" 开启文件类型侦测
-filetype on
-" 根据侦测到的不同类型加载对应的插件
-filetype plugin on
 " 开启文件类型检查，并且载入与该类型对应的缩进规则,例如 .py 去查找配置 ~/.vim/indent/python.vim
-filetype indent on
+filetype indent plugin on
 " 打开语法高亮。自动识别代码，使用多种颜色显示
 syntax on
 " 在底部显示，当前处于命令模式还是插入模式
